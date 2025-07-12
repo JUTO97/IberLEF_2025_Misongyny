@@ -1,0 +1,32 @@
+{
+    "text_col": "lyrics_clean",
+    "label_col": "label",
+    "group_col": "id",
+    "models": [
+      {
+        "name": "roberta_bne",
+        "path": "SeTo97/roberta-base-bne_ft_70",
+        "batch_size": 32,
+        "pad_multiple_of": 8,
+        "fixed_max_length": null,
+        "preprocessing_config": {"lang":  "spa", "remove_duplicates": true, "cased": true, "return_str": true}
+      },
+      {
+        "name": "longformer_bne",
+        "path": "SeTo97/longformer-base-4096-bne-es_ft_70_2",
+        "batch_size": 6,
+        "pad_multiple_of": 8,
+        "fixed_max_length": null,
+        "preprocessing_config": {"lang":  "spa", "remove_duplicates": false, "cased": true, "return_str": true}      
+      },
+      {
+        "name": "mdeberta_v3",
+        "path": "SeTo97/mdeberta-v3-base_ft_70",
+        "batch_size": 8,
+        "fixed_max_length": 512, 
+        "preprocessing_config": {"lang":  "spa", "remove_duplicates": true, "cased": true, "return_str": true}
+      
+      }
+    ]
+  }
+  
